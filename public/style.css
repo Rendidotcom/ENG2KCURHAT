@@ -1,0 +1,100 @@
+.nav-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #eaeef3;
+  color: #333;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.secondary-action {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #f1e7fa;
+  color: #6a1b9a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #e3d3f5;
+  transform: translateY(-1px);
+}
+.refleksi-bar {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.refleksi-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 14px 18px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  color: #3b1d6b;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: all 0.25s ease;
+}
+
+.refleksi-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.refleksi-link .icon {
+  font-size: 22px;
+}
+
+.refleksi-link .arrow {
+  font-size: 18px;
+  opacity: 0.8;
+}
+#refleksi-list {
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 0 16px;
+}
+
+.refleksi-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.refleksi-text {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.refleksi-time {
+  margin-top: 12px;
+  font-size: 0.85em;
+  color: #777;
+  text-align: right;
+}
+
+.loading,
+.empty,
+.error {
+  text-align: center;
+  color: #777;
+  font-size: 0.95em;
+}

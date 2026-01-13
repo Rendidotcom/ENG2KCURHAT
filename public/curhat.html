@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Curhat 7C</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #e0f2ff, #fdf2ff);
+        padding: 16px;
+    }
+
+    .card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 480px;
+        padding: 22px;
+        border-radius: 18px;
+        box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 6px;
+        color: #6a1b9a;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 0.95em;
+        color: #555;
+        margin-bottom: 18px;
+        line-height: 1.4;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 130px;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        resize: vertical;
+        box-sizing: border-box;
+    }
+
+    textarea:focus {
+        outline: none;
+        border-color: #7b1fa2;
+        box-shadow: 0 0 0 2px rgba(123,31,162,0.12);
+    }
+
+    .file-box {
+        margin-top: 14px;
+        font-size: 0.9em;
+        color: #444;
+    }
+
+    input[type="file"] {
+        margin-top: 6px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 18px;
+        padding: 13px;
+        font-size: 1em;
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #7b1fa2, #512da8);
+        color: #fff;
+        cursor: pointer;
+        transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    #msg {
+        margin-top: 14px;
+        text-align: center;
+        font-size: 0.95em;
+    }
+
+    /* ===== REFLEKSI BAR (FIX & CANTIK) ===== */
+    .refleksi-bar {
+        margin-top: 16px;
+    }
+
+    .refleksi-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 18px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+        color: #3b1d6b;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        transition: all 0.25s ease;
+    }
+
+    .refleksi-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+
+    .refleksi-link .icon {
+        font-size: 22px;
+    }
+
+    .refleksi-link .arrow {
+        font-size: 18px;
+        opacity: 0.75;
+    }
+
+    .note {
+        margin-top: 14px;
+        text-align: center;
+        font-size: 0.8em;
+        color: #777;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>💬 Curhat 7C</h2>
+
+    <div class="subtitle">
+        Ruang aman untuk menulis apa pun yang kamu rasakan.<br>
+        Tidak perlu sempurna, cukup jujur dari hati 🤍
+    </div>
+
+    <textarea
+        id="curhat"
+        placeholder="Tulis curhatmu di sini… tentang harimu, perasaanmu, atau hal yang ingin kamu lepaskan 🌱"
+    ></textarea>
+
+    <div class="file-box">
+        📷 Tambahkan foto (opsional)
+        <input type="file" id="foto" accept="image/*">
+    </div>
+
+    <button id="submitBtn">✨ Kirim Curhat</button>
+
+    <!-- BAR REFLEKSI TEMAN -->
+    <div class="refleksi-bar">
+        <a href="display.html" class="refleksi-link">
+            <span class="icon">👀</span>
+            <span class="text">Lihat Refleksi Teman</span>
+            <span class="arrow">→</span>
+        </a>
+    </div>
+
+    <p id="msg"></p>
+
+    <div class="note">
+        Media refleksi • bukan media sosial
+    </div>
+</div>
+
+<!-- SCRIPT TIDAK DIUBAH -->
+<script src="js/config.js"></script>
+<script src="js/submit.js"></script>
+<script src="js/display.js" defer></script>
+
+</body>
+</html>
