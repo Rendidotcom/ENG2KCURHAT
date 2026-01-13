@@ -2,17 +2,18 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Curhat 7C</title>
+  <title>Surat untuk Sahabat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
     :root {
-      --bg: #f5f7fb;
+      --bg: linear-gradient(180deg, #f7f8ff, #eef2ff);
       --card: #ffffff;
       --text: #1f2937;
       --muted: #6b7280;
       --border: #e5e7eb;
-      --radius: 14px;
+      --accent: #6366f1;
+      --radius: 18px;
     }
 
     * {
@@ -26,29 +27,35 @@
                    "Segoe UI", Roboto, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
+      min-height: 100vh;
     }
 
     header {
-      padding: 20px 16px 10px;
+      padding: 32px 16px 18px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--accent);
     }
 
     header p {
-      margin: 6px 0 0;
-      font-size: 0.9rem;
+      margin: 10px 0 0;
+      font-size: 0.95rem;
       color: var(--muted);
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     main {
-      max-width: 640px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 12px 16px 24px;
     }
 
     #empty {
@@ -56,48 +63,69 @@
       text-align: center;
       color: var(--muted);
       font-size: 0.95rem;
-      padding: 40px 10px;
+      padding: 60px 16px;
     }
 
     #list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
 
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 14px 16px;
-      font-size: 0.95rem;
-      line-height: 1.5;
+      padding: 18px 18px;
+      font-size: 0.96rem;
+      line-height: 1.65;
       word-wrap: break-word;
       white-space: pre-wrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      position: relative;
+    }
+
+    .card::before {
+      content: "💌";
+      position: absolute;
+      top: -10px;
+      left: 16px;
+      background: var(--card);
+      padding: 0 6px;
+      font-size: 0.9rem;
     }
 
     footer {
       text-align: center;
       font-size: 0.75rem;
       color: var(--muted);
-      padding: 24px 12px 32px;
+      padding: 28px 12px 36px;
+    }
+
+    footer span {
+      opacity: 0.8;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Curhat 7C</h1>
-    <p>Tulisan teman-teman • ditampilkan secara aman</p>
+    <h1>Surat untuk Sahabat</h1>
+    <p>
+      Kumpulan tulisan yang ditujukan untuk sahabat —  
+      dibaca dengan aman, tanpa nama, tanpa penilaian.
+    </p>
   </header>
 
   <main>
-    <div id="empty">Belum ada curhat yang bisa ditampilkan.</div>
+    <div id="empty">
+      Belum ada surat yang bisa dibaca saat ini 🌱
+    </div>
     <div id="list"></div>
   </main>
 
   <footer>
-    © Curhat 7C • Read Only
+    <span>© Surat untuk Sahabat • Read Only</span>
   </footer>
 
   <!-- KONFIGURASI API (WAJIB SEBELUM display.js) -->
