@@ -13,6 +13,7 @@
       --muted: #6b7280;
       --border: #e5e7eb;
       --accent: #6366f1;
+      --accent-soft: #eef2ff;
       --radius: 18px;
     }
 
@@ -44,12 +45,37 @@
     }
 
     header p {
-      margin: 10px 0 0;
+      margin: 10px auto 0;
       font-size: 0.95rem;
       color: var(--muted);
       max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
+    }
+
+    /* ===== NAV BUTTON ===== */
+    .nav-wrap {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
     main {
@@ -76,7 +102,7 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 18px 18px;
+      padding: 18px;
       font-size: 0.96rem;
       line-height: 1.65;
       word-wrap: break-word;
@@ -101,10 +127,6 @@
       color: var(--muted);
       padding: 28px 12px 36px;
     }
-
-    footer span {
-      opacity: 0.8;
-    }
   </style>
 </head>
 
@@ -112,9 +134,16 @@
   <header>
     <h1>Surat untuk Sahabat</h1>
     <p>
-      Kumpulan tulisan yang ditujukan untuk sahabat —  
+      Kumpulan tulisan untuk sahabat —  
       dibaca dengan aman, tanpa nama, tanpa penilaian.
     </p>
+
+    <!-- TOMBOL NAVIGASI -->
+    <div class="nav-wrap">
+      <a class="nav-btn" href="curhat.html">
+        ✍️ Tulis Surat untuk Sahabat
+      </a>
+    </div>
   </header>
 
   <main>
@@ -125,7 +154,7 @@
   </main>
 
   <footer>
-    <span>© Surat untuk Sahabat • Read Only</span>
+    © Surat untuk Sahabat • Read Only
   </footer>
 
   <!-- KONFIGURASI API (WAJIB SEBELUM display.js) -->
